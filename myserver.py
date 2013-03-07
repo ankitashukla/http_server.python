@@ -14,13 +14,3 @@ while True:                           #infinite loop
 	#print "Connected by ", addr_info            #print client's address
 	channel.send ( "Hello World!")              #sending a message back (transmitting TCP msg)
 	channel.close                               #closing the socket
-
-import urllib2
-req = urllib2.Request('127.0.0.1:7007')
-res = urllib2.urlopen(req)
-print "Date:" + res.info().get('Date') ## printing the headers
-print "Expires:" + res.info().get('Expires')
-channel.send ("Expires:" + res.info().get('Expires'))
-print "Content-Type:" + res.info().get('Content-Type')
-print "Server:" + res.info().get('Server')
-res.close();
